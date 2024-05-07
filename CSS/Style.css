@@ -1,0 +1,541 @@
+/* Style de base */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Aligne les éléments sur les bords des flex containers */
+    align-items: center; /* Centre les éléments verticalement */
+}
+
+.menu li a {
+    font-size: 19px; /* Modifier la taille de la police selon vos préférences */
+}
+.menu li a {
+    font-size: 19px; /* Modifier la taille de la police selon vos préférences */
+}
+.menu li {
+    margin-right: 20px; /* Espacement entre les éléments de la liste */
+    position: relative; /* Définir une position relative pour permettre l'utilisation des pseudo-éléments */
+}
+
+.menu li:not(:last-child)::after {
+    content: "|"; /* Contenu du séparateur */
+    position: absolute;
+    top: 50%;
+    right: -10px; /* Ajustez la position du séparateur */
+    transform: translateY(-50%);
+}
+
+
+/* Style de l'en-tête */
+.header {
+    background-color: lightblue;
+    color: white;
+    padding: 20px 0;
+}
+
+
+
+.navbar {
+    display: flex;
+    flex-direction: row; /* Ajout de cette ligne */
+    align-items: center;
+	margin-bottom: 0px; /* Réduire l'espace en bas de la barre de navigation */
+	position: fixed;
+    right: 0;
+    border: 3px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	background-color: lightgrey;
+}
+
+.logo {
+    width: 50px; /* Ajustez la largeur du logo selon vos préférences */
+    height: auto; /* Assurez-vous que la hauteur s'ajuste automatiquement pour conserver les proportions */
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Ajout de cette ligne */
+}
+
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.logo {
+    margin-right: auto; /* Pour pousser le logo à l'extrême gauche */
+    display: flex;
+    align-items: center; /* Pour aligner verticalement le texte et l'image */
+}
+
+.logo img {
+    width: 40px; /* Changer la taille de l'image selon vos préférences */
+    height: auto; /* Pour conserver les proportions de l'image */
+    margin-right: 10px; /* Pour ajouter un espace entre le logo et le texte */
+}
+
+
+
+
+
+
+.acc {
+    background-color: lightblue; /* Couleur de fond */
+    text-align: center; /* Centrer le contenu horizontalement */
+}
+
+.acc .container {
+    max-width: 1200px; /* Limitez la largeur du contenu */
+    margin: 0 auto; /* Centrez le contenu horizontalement */
+}
+
+.acc .title {
+    font-size: 2.5rem; /* Taille de police pour le titre */
+    margin-bottom: 20px; /* Espace en bas du titre */
+}
+
+.acc p {
+    font-size: 1.1rem; /* Taille de police pour le paragraphe */
+    color: white; /* Couleur de texte */
+}
+.acc h1 {
+    color: white; /* Couleur de texte */
+}
+.acc span {
+    color: white; /* Couleur de texte */
+}
+.acc .photo img {
+    border-radius: 50%; /* Rendre l'image ronde */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Ajouter une ombre à l'image */
+	margin-bottom: 50px;
+}
+
+
+
+
+
+
+.about {
+    padding: 50px 0; /* Ajouter un espace autour du contenu */
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Diviser la grille en deux colonnes */
+    gap: 20px; /* Ajouter un espace entre les éléments de la grille */
+}
+
+.grid__item img {
+    max-width: 100%;
+	margin-left: 125px;	/* Assurer que l'image ne dépasse pas de sa conteneur */
+}
+
+.grid__item h1 {
+    font-size: 45px; /* Modifier la taille de la police du titre */
+    margin-bottom: 20px; /* Ajouter un espace en bas du titre */
+	color: lightblue;
+}
+
+.grid__item h3 {
+    font-size: 28px; /* Modifier la taille de la police du sous-titre */
+    margin-bottom: 10px; /* Ajouter un espace en bas du sous-titre */
+	color: lightblue;
+	margin-left: 230px;
+}
+
+.grid__item p {
+    font-size: 18px; /* Modifier la taille de la police du paragraphe */
+    line-height: 1.6; /* Ajuster la hauteur de ligne pour une meilleure lisibilité */
+	color: pink;
+	margin-right: 15px;
+}
+
+
+
+
+
+
+.exp {
+	background-color: white;
+}
+
+.section-header h1 {
+    color: lightblue;
+	text-align: center;
+	font-size: 45px; /* Modifier la taille de la police du titre */
+
+}
+
+
+.section-header p {
+    color: lightblue;
+	text-align: center;
+	font-size: 19px; /* Modifier la taille de la police du sous-titre */
+
+}
+
+.experience-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+
+.experience-card {
+    display: flex; /* Affichage en ligne des cartes d'expérience */
+    flex-wrap: wrap; /* Permettre le retour à la ligne si nécessaire */
+    align-items: stretch; /* Étirer les éléments pour qu'ils aient la même hauteur */
+	background-color: white;
+}
+
+.experience-card > div {
+    width: 50%; /* Chaque carte occupe 50% de la largeur */
+    box-sizing: border-box; /* Inclure le padding dans la largeur */
+    padding: 10px; /* Ajouter un espace entre les cartes */
+}
+
+
+.experience-card1, .experience-card2, .experience-card3, .experience-card4{
+    flex: 1; /* Chaque expérience prendra la même quantité d'espace */
+    margin-right: 20px; /* Ajouter une marge entre les expériences */
+}
+
+
+.experience-card1:hover {
+    transform: translateY(-5px);
+}
+
+.experience-card2:hover {
+    transform: translateY(-5px);
+}
+
+.experience-card3:hover {
+    transform: translateY(-5px);
+}
+
+.experience-card4:hover {
+    transform: translateY(-5px);
+}
+
+.experience-header h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.experience-header h2 {
+    color: lightblue;
+}
+
+.experience-header p {
+    color: lightblue;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.experience-content p {
+    font-size: 16px;
+    color: lightblue;
+    margin-bottom: 10px;
+	text-align: justify;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Permettre le retour à la ligne si l'espace est insuffisant */
+    justify-content: space-between; /* Espacement égal entre les expériences */
+}
+
+.experience {
+    width: calc(50% - 10px); /* Définir la largeur des expériences */
+    margin-bottom: 20px; /* Marge inférieure pour séparer les expériences */
+}
+
+.experience-card img {
+    width: 100px; /* Largeur fixe */
+    height: 100px; /* Hauteur fixe */
+    object-fit: cover; /* Ajuster l'image pour remplir complètement le conteneur */
+    border-radius: 5px; /* Ajouter un arrondi aux coins */
+}
+
+
+
+
+.skills {
+    background-color: white;
+    padding: 50px 0;
+}
+
+.container1 {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.section-fin-comp p{
+	font-size: 19px; /* Modifier la taille de la police du titre */
+	color: lightblue;
+	text-align: center;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+	font-size: 45px; /* Modifier la taille de la police du titre */
+	color: lightblue;
+}
+
+.section-header p{
+    text-align: center;
+	font-size: 19px; /* Modifier la taille de la police du titre */
+	color: lightblue;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skill {
+    width: 200px;
+    padding: 20px;
+    background-color: lightblue;
+    border: 1px solid #ccc;
+    margin: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+	color: white;
+	
+}
+
+.skill:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+.formation {
+    background-color: lightblue;
+    padding: 50px 0;
+}
+
+.container2 {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section-title1 {
+    text-align: center;
+    margin-bottom: 30px;
+	font-size: 45px; /* Modifier la taille de la police du titre */
+	color: white;
+}
+.section-header1 p {
+    text-align: center;
+	color: white;
+	font-size: 19px; /* Modifier la taille de la police du titre */
+}
+.formation-item {
+    margin-bottom: 30px;
+    border: 3px solid white;
+    border-radius: 5px;
+    overflow: hidden; /* Assure que les contenus ne dépassent pas la boîte */
+	display: flex; /* Utilise Flexbox */
+	background-color: lightblue;
+	color: white;
+}
+
+.formation-item img {
+	width: 250px; /* Largeur fixe */
+    height: 250px; /* Hauteur fixe */
+    object-fit: cover; /* Ajuster l'image pour remplir complètement le conteneur */
+    border-radius: 5px; /* Ajouter un arrondi aux coins */
+}
+
+.formation-details {
+    padding: 20px;
+	flex-grow: 1; /* Permet au contenu de s'étendre pour remplir l'espace disponible */
+    display: flex;
+    flex-direction: column; /* Empile le contenu verticalement */
+}
+
+.formation-details h2,
+.formation-details h3 {
+    margin-top: 0;
+}
+
+.formation-details p {
+    margin-bottom: 10px;
+}
+
+.formation-certif-item {
+    background-color: lightblue;
+    border-top: 3px solid white;
+    padding: 20px;
+}
+
+.formation-certif-item img {
+    width: 180px;
+    height: auto;
+    float: left;
+    margin-right: 20px;
+}
+
+/* Assure que les certificats suivants ne s'affichent pas avec les marges de la formation */
+.formation-certif-item + .formation-certif-item {
+    margin-top: -1px;
+}
+
+.formation-item .formation-certif-item {
+    width: 100%; /* Force les certificats à occuper toute la largeur */
+}
+
+
+#certificationPix {
+    cursor: pointer; /* Définissez un curseur de type pointer pour indiquer que l'image est cliquable */
+}
+
+.certif-img:hover {
+    transform: scale(2.5); /* ou toute autre transformation souhaitée */
+}
+
+
+
+
+
+
+
+.section-title2 {
+    text-align: center;
+    margin-bottom: 30px;
+	font-size: 45px; /* Modifier la taille de la police du titre */
+	color: white;
+}
+
+.section-header2 p {
+    text-align: center;
+	color: white;
+	font-size: 23px; /* Modifier la taille de la police du titre */
+}
+
+.projets {
+    background-color: lightblue;
+    color: lightblue;
+}
+
+/* Projets et réalisations section styles */
+.projets {
+    padding: 50px 0;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    flex-basis: calc(50% - 20px);
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.card img {
+    max-width: 320px; /* Taille maximale des images */
+    height: auto;
+}
+
+
+.card-details {
+    padding: 20px;
+}
+
+.card-details h3 {
+    margin-bottom: 10px;
+}
+
+.card-details p {
+    margin-bottom: 10px;
+}
+
+
+
+
+.contact {
+	background-color: lightblue;
+}
+.section-title3 {
+	font-size: 45px; /* Modifier la taille de la police du titre */
+	color: white;
+	text-align: center;
+}
+
+.section-header3 p {
+	color: white;
+	font-size: 23px; /* Modifier la taille de la police du titre */
+    text-align: center;
+}
+/* Contact section styles */
+.contact {
+    padding: 50px 0;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    height: 150px;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
